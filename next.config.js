@@ -6,10 +6,7 @@ const nextConfig = {
             "/"
         ]
     },
-    output: {
-        // options related to "next export" go here
-    },
-    // other Next.js config options go here
+    output: "export",
 }
 
 module.exports = nextConfig;
