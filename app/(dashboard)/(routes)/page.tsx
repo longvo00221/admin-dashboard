@@ -33,7 +33,7 @@ const DashboardPage = () => {
         const UserData = await privateClient("user/get-user-list");
         const ProductData = await publicClient("product/product-list");
         
-        
+
         setOrders(OrderData?.data?.content);
         setAuthori(OrderData?.data);
         setUserList(UserData?.data?.content);
@@ -72,7 +72,7 @@ const DashboardPage = () => {
         redirect("/sign-in");
       }
     }
-  }, []);
+  }, [router]);
   useEffect(() => {
     if (!orders || !userList || !products) return;
 
