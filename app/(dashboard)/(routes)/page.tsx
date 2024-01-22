@@ -43,18 +43,18 @@ const DashboardPage = () => {
       } catch (error) {
         toast.error((error as ErrorAuthori).data?.message);
         setLoadingFetchData(false);
-        if (
-          (error as ErrorAuthori).data?.statusCode === 401 &&
-          (error as ErrorAuthori).data?.message === "Unauthorized"
-        ) {
-          const handleSignOut = () => {
-            if (typeof window !== "undefined") {
-              localStorage.removeItem("user");
-            }
-            router.push("/sign-in");
-          };
-          handleSignOut();
-        }
+        // if (
+        //   (error as ErrorAuthori).data?.statusCode === 401 &&
+        //   (error as ErrorAuthori).data?.message === "Unauthorized"
+        // ) {
+        //   const handleSignOut = () => {
+        //     if (typeof window !== "undefined") {
+        //       localStorage.removeItem("user");
+        //     }
+        //     router.push("/sign-in");
+        //   };
+        //   handleSignOut();
+        // }
       }
     };
     if (typeof window !== "undefined") {
