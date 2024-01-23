@@ -5,7 +5,7 @@ interface User {
   // Add other properties as needed
 }
 
-const baseURL = "https://be-phone-eu7f.onrender.com/";
+const baseURL = "https://phone-be.onrender.com/";
 
 // Check if user information is available in localStorage
 let user: User | null = null;

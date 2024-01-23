@@ -4,11 +4,11 @@ interface DashboardLayoutProps {
   params: { storeId: string };
 }
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
-
-
+  
   return (
-  <>
-    <Navbar/>
-    {children}
-  </>);
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
 }
