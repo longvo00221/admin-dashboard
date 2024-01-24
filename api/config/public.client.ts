@@ -1,6 +1,6 @@
 import axios, { AxiosRequestHeaders } from 'axios'
 import queryString from 'query-string'
-const baseURL = "https://phone-be.onrender.com/"
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL
 
 const publicClient = axios.create({
     baseURL,

@@ -5,7 +5,7 @@ interface User {
   // Add other properties as needed
 }
 
-const baseURL = "https://phone-be.onrender.com/";
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // Check if user information is available in localStorage
 let user: User | null = null;

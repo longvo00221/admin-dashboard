@@ -60,7 +60,9 @@ const DashboardPage = () => {
     if (typeof window !== "undefined") {
       const user = localStorage.getItem("user");
       if (user) {
+        
         const userData = JSON.parse(user);
+        console.log(userData)
         if (userData.role) {
           setIsUser(true);
           setLoadingFetchData(true);
