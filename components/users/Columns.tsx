@@ -96,6 +96,7 @@ export const CellAction = ({ data }: ICellAction) => {
       await privateClient.delete(`user/delete-user/${data.id}`);
       router.push("/users");
       toast.success("User deleted!");
+      window.location.reload()
     } catch (error) {
       toast.error("Failed to delete User");
     } finally {
