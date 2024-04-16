@@ -27,7 +27,15 @@ const UsersPage = () => {
     phone: user.phone,
     role: user.role,
   }));
-
+  if (typeof window !== "undefined") {
+    const user = localStorage.getItem("user");
+    if (user) {
+      
+      const userData = JSON.parse(user);
+      console.log(userData)
+      
+    } 
+  }
   return (
     <div className="flex-col">
         <div className="flex-1 space-y-4 p-8 pt-6">
