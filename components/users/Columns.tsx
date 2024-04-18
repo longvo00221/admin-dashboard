@@ -12,7 +12,7 @@ import { Button } from "../ui/button";
 import { Copy, Edit, MoreHorizontal, ShieldCheck, Trash2, User } from "lucide-react";
 import { toast } from "sonner";
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AlertModal from "../modals/alertModal";
 import privateClient from "@/api/config/private.client";
 import {format} from 'date-fns'
@@ -26,12 +26,13 @@ export type UserColumn = {
   address: string;
   phone: string;
   role: boolean;
+  currUserId:any
 };
 
 export const Columns: ColumnDef<UserColumn>[] = [
   {
     accessorKey: "stt",
-    header: "Id",
+    header: "stt",
   },
   {
     accessorKey: "name",
@@ -113,7 +114,7 @@ export const CellAction = ({ data }: ICellAction) => {
         onClose={() => setIsOpen(false)}
         onConfirm={onDelete}
       />
-      <DropdownMenu>
+      {data.id !== data.currUserId && <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="h-8 w-8 p-0">
             <span className="sr-only">Open menu</span>
@@ -144,7 +145,7 @@ export const CellAction = ({ data }: ICellAction) => {
             Delete
           </DropdownMenuItem>
         </DropdownMenuContent>
-      </DropdownMenu>
+      </DropdownMenu>}
     </>
   );
 };

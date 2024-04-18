@@ -29,7 +29,8 @@ export const Columns: ColumnDef<BrandColumn>[] = [
     },
     {
         accessorKey:"banner",
-        header:"Banner"
+        header:"Banner",
+        cell: ({row}) => <img src={row.original.banner} alt={row.original.name} style={{width: '100px', height: 'auto'}}/>
     },
     {
         id:"actions",
