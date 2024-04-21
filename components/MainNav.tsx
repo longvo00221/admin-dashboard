@@ -109,8 +109,9 @@ const MainNav = ({
                   <IconButton icon={<X size={20} />} onClick={onClose} />
                 </div>
                
-                <div className="flex flex-col w-full space-y-3 mt-10 items-center">
-                  {routes.map((route) => (
+                <div className="flex flex-col w-full  mt-10 items-center justify-between h-full">
+                  <div className="flex flex-col w-full space-y-3  items-center">
+                    {routes.map((route) => (
                     <Link
                       onClick={onClose}
                       key={route.href}
@@ -125,6 +126,11 @@ const MainNav = ({
                       {route.label}
                     </Link>
                   ))}
+                  </div>
+                  <Button className="w-1/2" onClick={() => handleSignOut()} >
+                    Sign out
+                    <LogOut className="ml-3" size={15}/>
+                  </Button>
                 </div>
               </Dialog.Panel>
             </div>

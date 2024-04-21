@@ -97,40 +97,40 @@ const DashboardPage = () => {
           <div className="flex-1 space-y-4 p-8 pt-6">
             <Heading title="Dashboard" description="Overview of your store" />
             <Separator />
-            <div className="grid gap-4 grid-cols-3">
+            <div className="grid gap-2 grid-cols-3">
               <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 md:p-6 p-2">
                   <CardTitle className="text-sm font-medium">
                     Total revenue
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="md:p-6 p-2">
                   <p className="text-sm lg:text-2xl font-bold">
                     {priceFormat.format(total)}
                   </p>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 md:p-6 p-2">
                   <CardTitle className="text-sm font-medium">
                     Number of orders
                   </CardTitle>
                   <CreditCard className="text-muted-foreground w-4 h-4" />
                 </CardHeader>
-                <CardContent>
+                <CardContent className="md:p-6 p-2">
                   <p className="text-sm lg:text-2xl font-bold">
                     {orders?.length}
                   </p>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 md:p-6 p-2">
                   <CardTitle className="text-sm font-medium">
                     Products In stock
                   </CardTitle>
                   <Package className="text-muted-foreground w-4 h-4" />
                 </CardHeader>
-                <CardContent>
+                <CardContent className="md:p-6 p-2">
                   <p className="text-sm lg:text-2xl font-bold">
                     {products?.length}
                   </p>

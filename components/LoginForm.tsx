@@ -64,9 +64,9 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex items-center justify-center">
       {loading && <Loading/>}
-      <div className="shadow-md w-[500px] p-10">
+      <div className="shadow-md md:w-[500px] md:p-10 p-4 w-[90%] ">
         <Form {...form}>
           <form
             className="space-y-8 w-full"
